@@ -14,6 +14,6 @@ struct lds_array{
 
 LDS_RET new_lds_array(lds_array* ret, size_t init_size, size_t elem_size);
 
-static LDS_RET resize_lds_array(lds_array* lds_arr, size_t size);
-
 LDS_RET add_lds_array(lds_array* lds_arr, const void* item);
+
+LDS_RET set_lds_array(lds_array* lds_arr, size_t pos, void* element);
