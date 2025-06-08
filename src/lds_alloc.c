@@ -26,3 +26,11 @@ inline void *lds_realloc(void *ptr, size_t size,
   return alloc_nullable == NULL ? GLOBAL_LDS_ALLOC.realloc(ptr, size)
                                 : alloc_nullable.realloc(ptr, size);
 }
+
+inline void lds_free(void* ptr, struct lds_allocator* alloc_nullable){
+    if(alloc_nullable == NULL){
+        GLOBAL_LDS_ALLOC.free(ptr);
+    } else {
+        alloc_nullable.free(ptr);
+    }
+}

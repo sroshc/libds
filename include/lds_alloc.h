@@ -17,6 +17,8 @@ inline void* lds_malloc(struct lds_allocator* alloc_nullable);
 
 inline void* lds_realloc(void* ptr, size_t size, struct lds_allocator* alloc_nullable);
 
+inline void* lds_free(void* ptr, struct lds_allocator* alloc_nullable);
+
 extern struct lds_allocator GLOBAL_LDS_ALLOC;
 
 #endif
